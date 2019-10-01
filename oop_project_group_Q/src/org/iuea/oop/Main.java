@@ -1,9 +1,11 @@
 
-package org.iuea.oop.model;
+package org.iuea.oop;
+import org.iuea.oop.view.LoginView;
 
 /*
         Group members
         =============
+        
         Name                                 Registration Number
         ====                                 ===================
         BAMATA WA BAMATA Maurice             18/420/BSSE-S
@@ -12,19 +14,14 @@ package org.iuea.oop.model;
         NANNYUNJA NOELINA                    19/536/BSCS-S
         */
 
+public class Main {
 
+    public static void main(String[] args) {
 
-public class Student {
-    String firstName;
-    String lastName;
-    String email;
-    Courses course;
- 
-    public Student(){}
-    
-    
-    
+       LoginView log = new LoginView(); // login window 
+
+       
+    }
+   
 }
-
-
         

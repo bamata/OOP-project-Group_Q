@@ -1,11 +1,10 @@
 
-package org.iuea.oop;
-import org.iuea.oop.view.LoginView;
+package org.iuea.oop.modall;
+
 
 /*
         Group members
         =============
-        
         Name                                 Registration Number
         ====                                 ===================
         BAMATA WA BAMATA Maurice             18/420/BSSE-S
@@ -13,15 +12,20 @@ import org.iuea.oop.view.LoginView;
         ALLY KALIMA                          18/1097/BIT-S
         NANNYUNJA NOELINA                    19/536/BSCS-S
         */
-
-public class Oop_project_group {
-
-    public static void main(String[] args) {
-
-       LoginView log = new LoginView(); // login window 
-
-       
-    }
-   
+public class Grades {
+    /* course unit
+    */
+    int assignment;
+    int course_work;
+    int practical;
+    int presentation;
+    int final_exam;
+    int final_mark;
+    int courseGrade;
+    
+    public Grades() {}
+    
+    
 }
+
         

@@ -1,5 +1,5 @@
 
-package org.iuea.oop.model;
+package org.iuea.oop.modall;
 
 
 /*

@@ -1,5 +1,5 @@
 
-package org.iuea.oop.model;
+package org.iuea.oop.modall;
 
 /*
         Group members
@@ -12,8 +12,15 @@ package org.iuea.oop.model;
         NANNYUNJA NOELINA                    19/536/BSCS-S
         */
 
-public class Role {
+public class Courses {
+    
+     String name;
+     String code;
+     String description;
+    
+    public Courses(){}
+
     
 }
 
-      
+       

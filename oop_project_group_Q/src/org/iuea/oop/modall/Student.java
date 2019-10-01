@@ -1,6 +1,5 @@
 
-package org.iuea.oop.model;
-
+package org.iuea.oop.modall;
 
 /*
         Group members
@@ -12,20 +11,20 @@ package org.iuea.oop.model;
         ALLY KALIMA                          18/1097/BIT-S
         NANNYUNJA NOELINA                    19/536/BSCS-S
         */
-public class Grades {
-    /* course unit
-    */
-    int assignment;
-    int course_work;
-    int practical;
-    int presentation;
-    int final_exam;
-    int final_mark;
-    int courseGrade;
+
+
+
+public class Student {
+    String firstName;
+    String lastName;
+    String email;
+    Courses course;
+ 
+    public Student(){}
     
-    public Grades() {}
     
     
 }
+
 
         
