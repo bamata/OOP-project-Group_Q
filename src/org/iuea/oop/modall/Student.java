@@ -1,5 +1,12 @@
 
 package org.iuea.oop.modall;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import java.awt.BorderLayout;
 
 /*
         Group members
@@ -21,12 +28,12 @@ public class Student {
     String lastName;
     String email;
     Courses course;
- 
-    public Student(){}
     
     
+    public Student() {
+    		 
     
+    }
 }
-
 
         

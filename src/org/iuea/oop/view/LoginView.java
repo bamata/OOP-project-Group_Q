@@ -11,9 +11,8 @@
         DANIEL AKEEN ATER                    19/632/BIT-S
         */
 
-
 package org.iuea.oop.view;
-
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Frame;
 import java.awt.event.ActionEvent;
@@ -29,8 +28,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.JWindow;
 
-
- 
+import javafx.scene.text.Font;
 
 public class LoginView  extends JFrame{
    //objects
@@ -43,10 +41,10 @@ public class LoginView  extends JFrame{
     
     public LoginView() {
         
-         new JFrame("Login View");
+         new JFrame();
          
-        String user_name = "Admin";
-        String user_password = "Secret";
+        String user_name = "admin";
+        String user_password = "secret";
         
         JPanel myPanel = new JPanel(  );
         myPanel.setBackground(Color.GRAY);
@@ -55,13 +53,11 @@ public class LoginView  extends JFrame{
         
         userNameField = new JTextField( 20 ); // user field
         userNameField.setBounds(295, 178, 200, 25);
-       
-        
-        
+        System.out.print(userNameField.getBorder());
+           
         labelUserPassword = new JLabel ("Password: "); //  label password
         labelUserPassword.setBounds(200, 200, 80, 80);
-      
-        
+   
         userPasswordField = new JPasswordField( 20 ); // password field
         userPasswordField.setBounds(295, 230, 200, 25);
         
@@ -71,32 +67,46 @@ public class LoginView  extends JFrame{
         
         
         // Triggering loginbutton and performing validation
-        
-        buttonLogin.addActionListener(new ActionListener(){
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (userNameField.getText().equals(user_name) && userPasswordField.getText().equals(user_password)){
-                    JOptionPane.showMessageDialog(LoginView.this, "You hava successfully logged in ");
-                }
-                
-                else {
-                  JOptionPane.showMessageDialog(LoginView.this, " You have entered invalid name or password","OOPS!",JOptionPane.ERROR_MESSAGE);
-
-                }
-      } 
-            
-        });
-    
+		
+		  buttonLogin.addActionListener(new ActionListener(){
+		  
+		  @Override public void actionPerformed(ActionEvent e) { if
+		  (userNameField.getText().equals(user_name) &&
+		  userPasswordField.getText().equals(user_password)){
+		  JOptionPane.showMessageDialog(LoginView.this,
+		  "You have successfully logged in ");
+		  
+		  MainView welcomePage = new MainView(); 
+		  setVisible(false);
+		  
+		  }
+		  
+		  else { JOptionPane.showMessageDialog(LoginView.this,
+		  " You have entered invalid name or password",null
+		  ,JOptionPane.ERROR_MESSAGE);
+		  
+		  } }
+		  
+		  });	 
         buttonCancel = new JButton( " Cancel"); // cancel button
-        buttonCancel.setBounds(400, 300, 78, 30);
+        buttonCancel.setBounds(400, 300, 78, 30); 
+        
+        buttonCancel.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				
+				dispose();
+						
+			}
+        	
+        });
         setLocation(300, 100);
         setSize(800, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setTitle("LoginView");
         
-        
-        // Adding components and panel to JFrame
-        
+        // Adding components and panel to JFrame     
         getContentPane().add(labelUserPassword);
         getContentPane().add(labelUserName);
         getContentPane().add(userNameField);

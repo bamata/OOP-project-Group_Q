@@ -1,5 +1,6 @@
 
 package org.iuea.oop;
+import org.iuea.oop.view.MainView;
 import org.iuea.oop.view.LoginView;
 
 /*
@@ -20,8 +21,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-       LoginView log = new LoginView(); // login window 
-
+		 LoginView log = new LoginView(); 
        
     }
    
