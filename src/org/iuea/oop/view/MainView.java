@@ -45,7 +45,6 @@ import javax.swing.JComboBox;
 
 public class MainView extends JFrame{
 	
-	
 			// create object for add button
 
 				//label for first name
