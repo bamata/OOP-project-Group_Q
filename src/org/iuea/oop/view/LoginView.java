@@ -77,7 +77,7 @@ public class LoginView  extends JFrame{
 		  "You have successfully logged in ");
 		  
 		  MainView welcomePage = new MainView(); 
-		  setVisible(false);
+		  dispose();
 		  
 		  }
 		  
@@ -94,10 +94,8 @@ public class LoginView  extends JFrame{
         buttonCancel.addActionListener(new ActionListener() {
 
 			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				
-				dispose();
-						
+			public void actionPerformed(ActionEvent arg0) {				
+				System.exit(0);					
 			}
         	
         });
