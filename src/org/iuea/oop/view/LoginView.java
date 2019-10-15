@@ -40,7 +40,6 @@ public class LoginView  extends JFrame{
      JButton buttonCancel;
     
     public LoginView() {
-        
          new JFrame();
          
         String user_name = "admin";
